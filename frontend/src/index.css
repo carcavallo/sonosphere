@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+  height: 50px;
+  margin-left: -25px;
+}
+
+@media (max-width: 640px) {
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+
+    50% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .text-loop {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: slide 40s linear infinite;
+  }
+
+  .radio {
+    margin-top: 0px !important;
+  }
+}

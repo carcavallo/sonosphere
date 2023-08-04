@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  core:
+    container_name: core
+    image: ghcr.io/antar/sonosphere-core:main
+    env_file:
+      - ./core/.env
+    ports:
+      - "3000:3000"
+  frontend:
+    container_name: frontend
+    image: ghcr.io/antar/sonosphere-frontend:main
+    ports:
+      - "80:80"
+    depends_on:
+      - core
